@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package example;
+import "google/protobuf/timestamp.proto";
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+message HelloRequest {
+  string name = 1;
+  google.protobuf.Timestamp createdAt = 2;  // observe this
+}
+
+message HelloReply {
+  string message = 1;
+}

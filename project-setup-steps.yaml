@@ -1,0 +1,30 @@
+# chatgpt: I want to implement complete javascript grpc server and client
+
+steps:
+  1. create foler:
+    mkdir grpc-example
+    cd grpc-example
+    npm init -y
+  2. Install gRPC and Protocol Buffers Tools:
+    npm install @grpc/grpc-js @grpc/proto-loader grpc-tools
+    brew  install protobuf
+  3. create .proto file: means, defining service using Protocol Buffers
+    example first.proto
+  4. generate .js from .proto files:
+    see tools/generate-proto.sh
+    give execute permission and run..
+    chmod +x generate-proto.sh
+    ./generate-proto.sh
+  5. implement gRPC server:
+    server/server1.js
+  6. implement gRPC client:
+    client/client1.js
+  7. run & test ur gRPC server & client:
+    node server1.js
+    node client1.js
+
+info:
+  @grpc/proto-loader - proto files loader
+  @grpc/grpc-js - package loader
+  grpc-tools - node protoc
+  google-protobuf - has google Type definitions, google.protobuf.Timestamp
